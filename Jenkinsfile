@@ -7,7 +7,7 @@ pipeline
         {
             steps
             {
-                git 'https://github.com/intelliqittrainings/maven.git'
+                git 'https://github.com/bharathkumar080/maven.git'
             }
         }
         stage('ContinuosBuild')
@@ -34,7 +34,7 @@ pipeline
             }
         }
         stage('ContinuosDelivery')
-        {
+       i{
             steps
             {
                 deploy adapters: [tomcat9(credentialsId: '203cdae9-fd6d-43ba-bbaf-32167f14b10a', path: '', url: 'http://172.31.32.135:8080')], contextPath: 'prodapp', war: '**/*.war'
